@@ -1,3 +1,4 @@
+import './weatherCard.css'
 import { Line } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -17,8 +18,13 @@ ChartJS.register(
     Tooltip,
     Filler,
 )
+import { WiDayCloudy, WiDaySunny } from 'react-icons/wi'
 
 export default function WeatherCard({ data }) {
+    const iconsMap = {
+        cloudy: <WiDayCloudy size={48} />,
+        sunny: <WiDaySunny size={48} />
+    }
 
     const charData = {
         labels: data.forecast.map((_, index) => `Dia ${index + 1}`),
@@ -66,12 +72,12 @@ export default function WeatherCard({ data }) {
     return (
         <div className="weather-card">
             {/* nome cidade */}
-            <h2 className="city-name">{data.city}</h2>
+            <h2 className="city-name">{data.cityName}</h2>
 
             {/* informações */}
             <div className="weather-info" >
                 <div className="weather-main">
-                    <div className="weather-icon"></div>
+                    <div className="weather-icon">{iconsMap[data.icon]}</div>
                     <span className="temperature">{data.currentTemp}</span>
                 </div>
 

@@ -1,0 +1,13 @@
+.loading {
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+
+.container-regioes {
+    width: 100%;
+    padding: 30px 0;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}

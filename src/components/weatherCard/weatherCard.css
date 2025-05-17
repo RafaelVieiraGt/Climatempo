@@ -1,0 +1,44 @@
+.weather-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 320px;
+    font-family: 'sans-serif';
+}
+
+.city-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: 'Poppins';
+    margin-bottom: 8px;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.weather-icon {
+    display: flex;
+    align-items: center;
+}
+.temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+.weather-date {
+    font-size: 1rem;
+    font-family: 'Poppins';
+    color: #666666;
+}
+.weather-chart {
+    margin-top: 8px;
+}
